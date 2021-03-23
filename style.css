@@ -1,108 +1,63 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400');
-*{ margin: 0; padding: 0;}
-
-body {
-    font-family: 'Josefin Sans', sans-serif;
-    margin: 0; 
-    padding: 0;
-    background: #fff;
-}
-/* main menu style css mark up */
-.mainMenu {
-    text-align: center;
-    height: 50px;
-    background: #800101;
-}
-.mainMenu > li{
-    display: inline-block;
-    border-right: 1px solid #fff;
-    position: relative;
-}
-.mainMenu > li:first-child{
-    border-left: 1px solid #fff
-}
-.mainMenu > li > a {
-    text-decoration: none;
-    color: #fff;
-    padding: 16px 20px;
-    display: block;
-}
-/* drop menu styling */
-.dropMenu {
-    position: absolute;
-    width: 150px;
-    text-align: left;
-    list-style: none;
-    top: 50px;
-    left: -5px;
-    display: none;
-}
-.dropMenu > li{
-    background: #640000;
-    border-bottom: 1px solid #fff;
-    opacity: 0;
-    
-}
-.dropMenu > li:last-child{
-    border-bottom: 0;
-    
-}
-.dropMenu > li > a {
-    text-decoration: none;
-    padding: 15px 10px;
-    display: block;
-    color: #fff;
-}
-.mainMenu > li:hover .dropMenu {
-    display: block;
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
 }
 
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
 
-/* some css animation styling */
-.dropMenu > li:nth-child(1) {
-    animation: sliding 300ms 0ms linear forwards;
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
 }
-.dropMenu > li:nth-child(2) {
-    animation: sliding 300ms 100ms linear forwards;
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
-.dropMenu > li:nth-child(3) {
-    animation: sliding 300ms 200ms linear forwards;
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
 }
-.dropMenu > li:nth-child(4) {
-    animation: sliding 300ms 300ms linear forwards;
+
+.openbtn:hover {
+  background-color: #444;
 }
-.dropMenu > li:nth-child(5) {
-    animation: sliding 300ms 400ms linear forwards;
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
 }
-@keyframes sliding {
-    from {
-        opacity: 0;
-        transform: translateZ(-20px;);
-        -moz-transform: translateZ(-20px;);
-        -webkit-transform: translateZ(-20px;);
-        -ms-transform: translateZ(-20px;);
-    }
-    to {
-        opacity: 1;
-        transform: translateZ(0);
-        -moz-transform: translateZ(0);
-        -webkit-transform: translateZ(0);
-        -ms-transform: translateZ(0);
-    }
-}
-@-webkit-keyframes sliding {
-    from {
-        opacity: 0;
-        transform: translateZ(-20px;);
-        -moz-transform: translateZ(-20px;);
-        -webkit-transform: translateZ(-20px;);
-        -ms-transform: translateZ(-20px;);
-    }
-    to {
-        opacity: 1;
-        transform: translateZ(0);
-        -moz-transform: translateZ(0);
-        -webkit-transform: translateZ(0);
-        -ms-transform: translateZ(0);
-    }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
