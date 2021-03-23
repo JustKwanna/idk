@@ -204,3 +204,17 @@ function closeNav() {
    
 </body>
 </html> 
+
+
+			<div id="objToBeDragged" class="dragClass" draggable="true" onDragStart="return dragStart(event)">
+				<p>Drag Me</p>
+			</div>
+		</div>
+		<div id="objToBeDropped" class="dropClass" onDragEnter="return dragEnter(event)"
+			onDrop="return dragDrop(event)" onDragOver="return dragOver(event)">
+			<p>Drop Here</p>
+		</div>
+
+		</center>
+	</body>
+</html>
