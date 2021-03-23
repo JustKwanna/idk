@@ -37,9 +37,10 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    .center {
+    
 body {
   font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
 }
 
 .flip-box {
@@ -48,6 +49,7 @@ body {
   height: 200px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
+    text-align:center;
 }
 
 .flip-box-inner {
@@ -57,10 +59,12 @@ body {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+    text-align:center;
 }
 
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg);
+    text-align:center;
 }
 
 .flip-box-front, .flip-box-back {
@@ -69,19 +73,22 @@ body {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+    text-align:center;
 }
 
 .flip-box-front {
   background-color: #bbb;
   color: black;
+    text-align:center;
 }
 
 .flip-box-back {
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
+    text-align:center;
 }
-    }
+    
 </style>
 </head>
 <body>
