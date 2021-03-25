@@ -233,9 +233,29 @@ body {
   <div id="mydivheader"><b>Click here to move</b></div>
   <p>
   <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button> </p>
+    <p><button onclick="typeWriter()">Click me</button> </p>
   <p>this</p>
   <p>DIV</p>
 </div>
+    
+    <p id="demo"></p>
+
+<script>
+var i = 0;
+var txt = 'Aymen';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+</body>
+</html>
 
 <script>
 //Make the DIV element draggagle:
